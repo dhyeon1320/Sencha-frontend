@@ -30,5 +30,17 @@ Ext.define('MyApp.view.main.MainController', {
 
     onSeekButtonClicked: function() {
         this.getView().queryById('hideme').setHidden(false);
+    },
+
+    onCheckChanged: function (checkbox, newValue, oldValue) { 
+        this.getView().queryById('hideme').setHidden(newValue);
+    },
+
+    showCheckbox: function () {
+        alert('checkbox show!!!');
+    },
+
+    onTextChanged: function (textField, newValue, oldValue) {
+        this.getView().queryById('hideme').setHtml(newValue);
     }
 });

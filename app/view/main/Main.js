@@ -48,8 +48,27 @@ Ext.define('MyApp.view.main.Main', {
                                 },
                                 {
                                     xtype: 'container',
-                                    itemId: 'hideme',
-                                    html:'날 감춰봐 ㅋㅋㅋㅋㅋ'
+                                    items : [
+                                        {
+                                            xtype: 'checkboxfield',
+                                            label: 'hiddenSwitch',
+                                            listeners: {
+                                                change: 'onCheckChanged',
+                                                show: 'showCheckbox'
+                                            }
+                                        },
+                                        {
+                                            xtype: 'textfield',
+                                            listeners: {
+                                                change: 'onTextChanged'
+                                            }
+                                        },
+                                        {
+                                            html: 'hello',
+                                            itemId: 'hideme',
+                                        },
+                                        
+                                    ]
                                 }
                                 
                                 
