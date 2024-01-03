@@ -19,7 +19,7 @@ Ext.define('MyApp.view.main.Main', {
             items: [
                 {
                     xtype: 'container',
-                    cls: 'top-container',
+                    cls: 'top-container-example1',
                     layout: 'hbox',
                     items: [
                         {
