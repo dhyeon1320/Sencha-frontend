@@ -21,12 +21,6 @@ Ext.define('MyApp.view.main.MainController', {
         alert(button.getText());
         
     },
-    
-    onHideButtonClicked: function (button) {
-        debugger
-        this.getView().queryById('hideme').setHidden(true);
-
-    },
 
     onSeekButtonClicked: function() {
         this.getView().queryById('hideme').setHidden(false);
