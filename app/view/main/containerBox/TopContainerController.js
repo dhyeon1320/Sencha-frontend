@@ -3,26 +3,20 @@ Ext.define('MyApp.view.main.containerBox.TopContainerController', {
     alias: 'controller.top-container-controller',
 
     
-    onHideButtonClicked: function (button) {
-        
-        this.getView().queryById('hideme').setHidden(true);
-        alert('글씨 없애기');
-        
-    },
+    onToggleButtonClicked: function (button) {
 
-    onSeekButtonClicked: function(button) {
-        this.getView().queryById('hideme').setHidden(false);
-        alert('글씨 나타내기');
-    },
-
-    onCheckChanged: function(checkbox, newValue) {
-        if (newValue) {
-            this.getView().queryById('hideme').setHidden(newValue);
-            alert('글씨 없애기');
+        if (this.getViewModel().get('isChanged')) {
+            this.getViewModel().set('isHidden', true);
+            this.getViewModel().set('isChanged', false);
         } else {
-            this.getView().queryById('hideme').setHidden(newValue);
-            alert('글씨 나타내기');
+            this.getViewModel().set('isHidden', false);
+            this.getViewModel().set('isChanged', true);
         }
+        
+    },
+
+    onCheckBoxChanged: function(checkbox, newValue, oldValue) {
+        this.getViewModel().set('isChecked',newValue);
     },
 
     showCheckbox: function(checkbox){

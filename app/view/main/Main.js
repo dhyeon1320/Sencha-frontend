@@ -7,7 +7,7 @@ Ext.define('MyApp.view.main.Main', {
     extend: 'Ext.Container',
     xtype: 'app-main',
     controller: 'main',
-    viewModel: 'main',
+    viewModel: 'main-view-model',
     width: '100%',
     cls: 'main-container',
     items: [
@@ -22,7 +22,8 @@ Ext.define('MyApp.view.main.Main', {
                 },
                 {
                     xtype: 'bottom-container'
-                }
+                },
+                
             ]
         }  
     ]

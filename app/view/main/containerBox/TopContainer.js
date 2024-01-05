@@ -5,11 +5,14 @@ Ext.define('MyApp.view.main.containerBox.TopContainer', {
     controller: {
         type: 'top-container-controller'
     },
+    viewModel: {
+        type: 'top-container-viewmodel'
+    },
     layout: 'hbox',
     items: [
         {
             xtype: 'container',
-            cls: 'secondary-container',
+            cls: 'secondary-container left-container',
             align: 'center',
             layout: 'vbox',
             items: [
@@ -19,29 +22,28 @@ Ext.define('MyApp.view.main.containerBox.TopContainer', {
                     items: [
                         {
                             xtype: 'button',
-                            cls: 'top-button',
-                            text: '감추기',
-                            handler: 'onHideButtonClicked'
+                            bind:{
+                                text: `{isChecked ? 'isLoading...' : 'active'}`,
+                                disabled: '{isChecked}',
+                                ui: `{isChecked ? 'disabled' : 'active'}`
+                            },
+                            handler: 'onToggleButtonClicked'
                         },
                         {
-                            xtype: 'button',
-                            cls: 'top-button',
-                            text: '나타내기',
-                            handler: 'onSeekButtonClicked'
+                            xtype: 'checkboxfield',
+                            boxLabel: 'LoadingCheckBox',
+                            bind:{
+                                checked: '{isChecked}'
+                            },
+                            listeners: {
+                                change: 'onCheckBoxChanged'
+                            }
                         },
                     ]
                 },
                 {
                     xtype: 'container',
                     items: [
-                        {
-                            xtype: 'checkboxfield',
-                            label: 'hiddenSwitch',
-                            listeners: {
-                                change: 'onCheckChanged',
-                                show: 'showCheckbox'
-                            }
-                        },
                         {
                             xtype: 'textfield',
                             listeners: {
@@ -56,13 +58,17 @@ Ext.define('MyApp.view.main.containerBox.TopContainer', {
                     ]
                 },
                 {
-                    xtype: 'card-component'
+                    xtype: 'card-component',
+                    itemId: 'card',
+                    bind: {
+                        hidden: '{isHidden}'
+                    }
                 }
             ]
         },
         {
             xtype: 'container',
-            cls: 'secondary-container',
+            cls: 'secondary-container right-container',
             align: 'center',
             layout: 'hbox',
             items: [
@@ -70,6 +76,8 @@ Ext.define('MyApp.view.main.containerBox.TopContainer', {
                     xtype: 'button',
                     cls: 'top-button',
                     text: '세번째',
+                    ui: 'first-ui',
+                    disabled: true,
                     handler: function () {
                         alert('세번째')
                     }

@@ -9,13 +9,14 @@
     box-sizing: border-box;
 }
 
-.top-button {
-    width: 428.500px;
-    height: 56px;
-    background-color: rgb(240, 240, 240);
-    border-color: rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
-    font-size: 13.3333px;
-    font-family: Arial;
-    align-items: flex-start;
+.left-container {
+    @include button-ui (
+        $ui: 'disabled',
+        $background-color: lightgrey
+    );
+
+    @include button-ui (
+        $ui: 'active',
+        $background-color: lightgreen
+    )
 }
