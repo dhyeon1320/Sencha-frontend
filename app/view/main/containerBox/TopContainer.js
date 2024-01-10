@@ -67,28 +67,17 @@ Ext.define('MyApp.view.main.containerBox.TopContainer', {
                 },
                 {
                     xtype: 'componentdataview',
-                    store: {
-                        data: [
-                            {id:1, title: '내신 2023년 서울 양천구 목동고 고2공통 1학기기말 수학1', progress: 'DB화 진행중'},
-                            {id:2, title: '내신 2023년 서울 양천구 목동고 고1공통 1학기기말 수학상', progress: 'DB화 진행중'},
-                            {id:3, title: '내신 2023년 부산 동래구 동인고 고2공통 2학기기말 미적분', progress: 'DB화 완료 및 추가결제 가능'},
-                            {id:4, title: '내신 2023년 서울 양천구 목동고 고1공통 2학기중간 수학하', progress: 'DB화 완료 및 추가결제 가능'},
-                            {id:5, title: '내신 2022년 서울 양천구 광영여고 고1공통 2학기기말 수학하', progress: 'DB화 완료 및 추가결제 가능'},
-                            {id:6, title: '내신 2023년 안양 동안구 부흥고 고2공통 2학기중간 수학2', progress: 'DB화 완료 및 추가결제 가능'},
-                            {id:7, title: '내신 2023년 서울 서대문구 이화금란고 고1공통 1학기중간 수학상', progress: 'DB화 완료 및 추가결제 가능'},
-                        ]
+                    layout:{
+                        type: 'hbox'
+                    },
+                    bind: {
+                        store: `{mydbsstore}`
                     },
                     itemConfig: {
                         xtype: 'card-component',
                         viewModel: true,
-                        bind: {
-                            html : '{id}',
-                            html : '{title}',
-                            html : '{progress}'
-                        }
-
                     }
-                }
+                },
             ]
         },
         {

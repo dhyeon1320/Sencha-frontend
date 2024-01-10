@@ -7,5 +7,11 @@ Ext.define('MyApp.view.main.containerBox.TopContainerViewModel', {
         isHidden: false,
         isChanged: false,
         isChecked: false
+    },
+    
+    stores: {
+        mydbsstore: {
+            type: 'mydbs-store'   
+        }
     }
 })

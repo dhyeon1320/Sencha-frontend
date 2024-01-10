@@ -16,11 +16,21 @@ Ext.define('MyApp.view.main.containerBox.CardComponent', {
                     cls: 'text-top'
                 },
                 {
-                    html: '내신 2023년 서울 양천구 목동고 고2공통 1학기 기말 수학1',
+                    bind: {
+                        html: `{record.title}`
+                    },
                     cls: 'text-medium'
                 },
                 {
-                    html: 'DB화 진행중',
+                    bind: {
+                        html: `{record.transformTitle}`
+                    },
+                    cls: 'text-medium'
+                },
+                {
+                    bind: {
+                        html: `{record.progress}`
+                    },
                     cls: 'text-bottom'
                 }
             ]
