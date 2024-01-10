@@ -1,7 +1,7 @@
 Ext.define('MyApp.view.main.containerBox.CardComponent', {
     extend: 'Ext.Container',
     alias: 'widget.card-component',
-    cls: 'card-component',
+    classCls: 'card-component',
     controller: {
         type: 'card-component-controller'
     },
