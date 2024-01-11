@@ -1,0 +1,29 @@
+.mathsecr {
+    font-family: pretendard;
+    font-weight: '20px';
+    font-size: '30px';
+    color: black;
+    background-color: rgb(255,255,255);
+}
+
+.header-panel {
+    @include panel-ui (
+        $ui: 'header-panel-ui',
+        $body-background-color: rgb(255,255,255),
+        $header-background-color: rgb(255,255,255),
+        $background-color: rgb(255,255,255),
+        $anchor-border-color: rgb(255,255,255)
+    )
+    
+}
+
+.header-button {
+    color: black;
+    font-family: pretendard;
+    background-color: rgb(255,255,255);
+}
+
+.space {
+    background-color: rgb(255,255,255);
+    width: 100%
+}
