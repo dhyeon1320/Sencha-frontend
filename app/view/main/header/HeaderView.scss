@@ -7,14 +7,7 @@
 }
 
 .header-panel {
-    @include panel-ui (
-        $ui: 'header-panel-ui',
-        $body-background-color: rgb(255,255,255),
-        $header-background-color: rgb(255,255,255),
-        $background-color: rgb(255,255,255),
-        $anchor-border-color: rgb(255,255,255)
-    )
-    
+    height: 5%;
 }
 
 .header-button {

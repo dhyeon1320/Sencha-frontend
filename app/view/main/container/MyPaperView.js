@@ -2,7 +2,7 @@ Ext.define('MyApp230111.view.main.container.MyPaperView', {
     extend: 'Ext.Container',
     alias: 'widget.my-paper-view-container',
     cls: 'my-paper-view-container',
-    alignself: 'center',
+    scrollable: true,
     viewModel: {
         type: 'my-paper-viewmodel'
     },
@@ -13,13 +13,16 @@ Ext.define('MyApp230111.view.main.container.MyPaperView', {
         {
             xtype:'container',
             layout: 'hbox',
+            cls: 'menu-container',
             items: [
                 {
-                    html: '내 문제지'
+                    html: '내 문제지',
+                    cls: 'menu-components'
                 },
                 {
                     xtype: 'button',
-                    text: '작업공간'
+                    text: '작업공간',
+                    cls: 'menu-components'
                 }
             ]
         },

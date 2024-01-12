@@ -22,7 +22,8 @@ Ext.define('MyApp230111.view.main.Main', {
             layout: 'hbox',
             items: [
                 {
-                    xtype: 'side-panel'
+                    xtype: 'side-panel',
+                    width: 344
                 },
                 {
                     xtype: 'my-paper-view-container'

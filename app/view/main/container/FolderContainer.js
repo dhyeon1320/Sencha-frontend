@@ -5,14 +5,17 @@ Ext.define('MyApp230111.view.main.container.FolderContainer', {
     items: [
         {
             xtype: 'componentdataview',
+            cls:'card-container',
             layout: {
-                type: 'hbox'
+                type: 'hbox',
+                wrap: true
             },
             bind: {
                 store: `{foldersstore}`
             },
             itemConfig: {
                 xtype: 'folder-card',
+                cls: 'folder-cards',
                 viewModel: true
             }
         }

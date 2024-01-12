@@ -15,6 +15,13 @@ Ext.define('MyApp230111.view.main.side.SideView', {
     collapsible: {
         direction: 'left',
     },
+    resizable: {
+        maxSize: 620,
+        minSize: 300,
+        edges: 'east',
+        dynamic: true,
+        split: true
+    },
     items: [
         {
             xtype: 'searchfield',

@@ -14,6 +14,11 @@ Ext.define('MyApp230111.store.Testfiles', {
         property: 'title',
         direction: 'ASC'
     }],
-    groupField: 'done',
+    grouper: {
+        property: 'done',
+        // groupFn: function(record) {
+        //     return record.get('done');
+        // }
+    },
     autoLoad: true
 })

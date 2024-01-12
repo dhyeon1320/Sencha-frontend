@@ -2,6 +2,7 @@ Ext.define('MyApp230111.view.main.container.TestfileContainer', {
     extend: 'Ext.Container',
     alias: 'widget.testfile-container',
     cls: 'testfile-container',
+    layout: 'vbox',
     items: [
         {
             xtype: 'container',
@@ -10,22 +11,33 @@ Ext.define('MyApp230111.view.main.container.TestfileContainer', {
                 {
                     xtype: 'button',
                     text: '+문제지 만들기',
-                    handler: 'onMakeButtonClicked'
+                    handler: 'onMakeButtonClicked',
                 },
                 {
                     xtype: 'button',
                     text: '생성일시순',
                     menu: {
                         items: [
-                            {text: '생성일시순'},
-                            {text: '이름순'}
+                            {
+                                text: '생성일시순',
+                                handler: function() {
+                                    this.up('button').setText('생성일시순');
+                                }
+                            },
+                            {
+                                text: '이름순',
+                                handler: function() {
+                                    this.up('button').setText('이름순');
+                                }
+                            }
                         ]
                     }
                 }
             ]
         },
         {
-            xtype: 'componentdataview',
+            xtype: 'list',
+            height: 1000,
             layout: {
                 type: 'hbox'
             },
@@ -34,6 +46,7 @@ Ext.define('MyApp230111.view.main.container.TestfileContainer', {
             },
             itemConfig: {
                 xtype: 'testfile-card',
+                cls: 'testfile-cards',
                 viewModel: true
             }
         }

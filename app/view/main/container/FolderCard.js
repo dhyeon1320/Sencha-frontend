@@ -4,8 +4,9 @@ Ext.define('MyApp230111.view.main.container.FolderCard', {
     classCls: 'folder-card',
     items: [
         {
+            iconCls: 'x-fa fa-folder',
             bind: {
-                html: `{(record.done/record.total)}`
+                html: `({record.done}/{record.total})`
             }
         },
         {
