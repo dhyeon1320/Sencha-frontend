@@ -1,25 +1,29 @@
-Ext.define('MyApp230111.view.main.container.TestfileContainer', {
+Ext.define('MyApp230111.view.main.container.DbCardContainer', {
     extend: 'Ext.Container',
-    alias: 'widget.testfile-container',
-    cls: 'testfile-container',
+    alias: 'widget.db-card-container',
+    cls: 'db-card-container',
     layout: 'vbox',
     defaults: {
-        cls: 'testfile-container-items'
+        cls: 'db-card-container-items'
     },
     items: [
         {
             xtype: 'container',
             layout: 'hbox',
+            defaults: {
+                cls: 'db-card-container-button'
+            },
             items: [
                 {
                     xtype: 'button',
-                    text: '+문제지 만들기',
-                    cls: 'testfile-container-button filemakebutton'
+                    text: '+ 나만의 DB 만들기',
+                    cls: 'db-card-container-button mydbmakebutton',
+                    handler: 'onCardButtonClicked'
                 },
                 {
                     xtype: 'button',
                     text: '생성일시순',
-                    cls: 'testfile-container-button sortbutton',
+                    cls: 'db-card-container-button sortbutton',
                     menu: {
                         items: [
                             {
@@ -42,11 +46,11 @@ Ext.define('MyApp230111.view.main.container.TestfileContainer', {
         {
             xtype: 'list',
             bind: {
-                store: `{testfilesstore}`
+                store: `{mydbsstore}`
             },
             itemConfig: {
-                xtype: 'testfile-card',
-                cls: 'testfile-cards',
+                xtype: 'db-card',
+                cls: 'db-cards',
                 viewModel: true
             },
 

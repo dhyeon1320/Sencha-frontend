@@ -5,7 +5,8 @@
         "done": "출제한 문제지",
         "date": "2023-11-15",
         "count" : 66,
-        "difficulty": 4.02
+        "difficulty": 4.02,
+        "QuestionGroupId": "7521"
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "done": "편집중",
         "date": "",
         "count" : 22,
-        "difficulty": 5.9
+        "difficulty": 5.9,
+        "QuestionGroupId": "7522"
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "done": "편집중",
         "date": "",
         "count" : 0,
-        "difficulty": 0
+        "difficulty": 0,
+        "QuestionGroupId": "7523"
     },
     {
         "id": 4,
@@ -29,6 +32,7 @@
         "done": "출제한 문제지",
         "date": "2023-11-14",
         "count" : 80,
-        "difficulty": 4.36
+        "difficulty": 4.36,
+        "QuestionGroupId": "7524"
     }
 ]

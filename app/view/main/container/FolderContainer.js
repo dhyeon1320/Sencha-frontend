@@ -16,7 +16,7 @@ Ext.define('MyApp230111.view.main.container.FolderContainer', {
             itemConfig: {
                 xtype: 'folder-card',
                 cls: 'folder-cards',
-                viewModel: true
+                viewModel: true,
             }
         }
     ]

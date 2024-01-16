@@ -1,4 +1,4 @@
-.testfile-cards {
+.db-cards {
     margin: 20px;
     display: flex;
     background-color: white;
@@ -6,7 +6,7 @@
     
 }
 
-.testfile-container {
+.db-card-container {
     background-color: white;
     border-radius: 30px;
     width: 95%;
@@ -15,7 +15,7 @@
     padding-top: 12px;
 }
 
-.testfile-container-items {
+.db-card-container-items {
     width: 95%;
     height: 90%;
     margin-left: auto;
@@ -30,11 +30,11 @@
     font: 'pretendard';
 }
 
-.testfile-container-button {
+.db-card-container-button {
     margin: 20px;
 }
 
-.filemakebutton {
+.mydbmakebutton {
     background-color: rgb(22, 212, 149);
     color: white;
 }

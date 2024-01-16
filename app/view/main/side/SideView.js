@@ -4,6 +4,7 @@ Ext.define('MyApp230111.view.main.side.SideView', {
     cls: 'side-panel',
     docked: 'left',
     ui: 'side-panel-ui',
+    height: '95%',
     controller: {
         type: 'side-view-controller'
     },
@@ -11,7 +12,7 @@ Ext.define('MyApp230111.view.main.side.SideView', {
         'Ext.panel.Collapser'
     ],
     width: '17.8%',
-    title: '내 문제지',
+    title: '<span>내 문제지</span>',
     collapsible: {
         direction: 'left',
     },

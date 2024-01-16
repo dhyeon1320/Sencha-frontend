@@ -11,7 +11,8 @@ Ext.define('MyApp230111.view.main.header.HeaderView', {
         {
             xtype: 'button',
             text: '수학비서',
-            cls: 'mathsecr'
+            cls: 'mathsecr',
+            handler: 'onHomeButtonClicked'
         },
         {
             xtype: 'spacer',
@@ -33,19 +34,18 @@ Ext.define('MyApp230111.view.main.header.HeaderView', {
             xtype: 'button',
             cls: 'header-button',
             text: '내 문제지',
-            handler: 'onButtonClicked'
+            handler: 'onMyPaperButtonClicked'
         },
         {
             xtype: 'button',
             cls: 'header-button',
             text: '나만의 DB',
-            handler: 'onButtonClicked'
+            handler: 'onMyDbButtonClicked'
         },
         {
             xtype: 'button',
             cls: 'header-button',
             text: '포인트 충전↗',
-            handler: 'onButtonClicked'
         },
         {
             xtype: 'button',

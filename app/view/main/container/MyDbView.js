@@ -1,10 +1,15 @@
-Ext.define('MyApp230111.view.main.container.MyPaperView', {
+Ext.define('MyApp230111.view.main.container.MyDbView', {
     extend: 'Ext.Container',
-    alias: 'widget.my-paper-view',
-    cls: 'my-paper-view',
+    alias: 'widget.my-db-view',
+    cls: 'my-db-view',
     scrollable: true,
     viewModel: {
-        type: 'my-paper-viewmodel'
+        type: 'my-db-viewmodel'
+    },
+    controller: {
+        onCardButtonClicked: function(button) {
+            debugger
+        }
     },
     layout: 'hbox',
     items: [
@@ -13,19 +18,20 @@ Ext.define('MyApp230111.view.main.container.MyPaperView', {
         },
         {
             scrollable: true,
-            width: '100%',
             height: '95%',
-            items: [
-                {
+            width: '100%',
+            weighted: true,
+            items: {
+                AdContainer:{
                     xtype:'ad-container'
                 },
-                {
+                MenuContainer:{
                     xtype:'container',
                     layout: 'hbox',
                     cls: 'menu-container',
                     items: [
                         {
-                            html: '내 문제지',
+                            html: '나만의 DB',
                             cls: 'menu-components'
                         },
                         {
@@ -36,13 +42,13 @@ Ext.define('MyApp230111.view.main.container.MyPaperView', {
                         }
                     ]
                 },
-                {
+                FolderContainer:{
                     xtype: 'folder-container'
                 },
-                {
-                    xtype: 'testfile-container'
+                DbCardContainer:{
+                    xtype: 'db-card-container'
                 }
-            ]
+            }
         }
     ]
     

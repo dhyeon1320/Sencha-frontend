@@ -8,6 +8,7 @@ Ext.define('MyApp230111.Application', {
 
     name: 'MyApp230111',
 
+    defaultToken: 'center-view',
     quickTips: false,
     platformConfig: {
         desktop: {

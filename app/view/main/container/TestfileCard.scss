@@ -4,7 +4,17 @@
     height: 180px;
     box-sizing: border-box;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
+
+    &-header {
+        text-align: right;
+        font-size: 12px;
+        margin: 8px;
+    }
+
+    &-body {
+        align-items: flex-end;
+    }
 }
 
 .testfile-card:hover {
@@ -13,5 +23,22 @@
     height: 180px;
     box-sizing: border-box;
     padding: 10px;
+    border-radius: 20px;
+}
+
+.testfile-card-title {
+    font-size: 12px;
+    font-weight: 1000;
+}
+
+.testfile-card-footer {
+    background-color: rgb(199, 198, 198);
     border-radius: 10px;
+    margin: 20px auto;
+    position: relative;
+    text-align: center;
+}
+
+.testfile-card-footers {
+    background-color: transparent; 
 }

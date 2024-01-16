@@ -16,19 +16,8 @@ Ext.define('MyApp230111.view.main.Main', {
             xtype:'header'
         },
         {
-            xtype:'container',
-            width: '100%',
-            height: '100%',
-            layout: 'hbox',
-            items: [
-                {
-                    xtype: 'side-panel',
-                    width: 344
-                },
-                {
-                    xtype: 'my-paper-view-container'
-                }
-            ]
+            xtype: 'center-view',
+            itemId: 'center-view'
         }
     ]
 });
