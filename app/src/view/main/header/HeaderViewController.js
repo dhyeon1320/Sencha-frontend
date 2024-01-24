@@ -11,7 +11,7 @@ Ext.define('MyApp230111.view.main.header.HeaderViewContoller', {
     },
 
     onHomeButtonClicked: function() {
-        this.redirectTo('center-view', true);
+        this.redirectTo('home', true);
     }
 })
 
