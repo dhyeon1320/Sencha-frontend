@@ -11,23 +11,31 @@ Ext.define('MyApp230111.view.home.Board', {
         store: null
     },
     // 각 구성요소마다 필요한 함수 정의
+    // title 받아서 update
     updateTitle: function (title) {
         this.title.setHtml(title);
     },
+
+    // shortcuttext 받아서 update
     updateShortcutText: function (value) {
         this.shortcut.setHtml(value);
     },
+
+    // store 받아서 update
     updateStore: function (store) {
         this.getViewModel().set('store', store);
     },
+
     initialize: function() {
-        this.callParent();
+        this.callParent(); // Container의 initialize method 호출
         this.shortcut.on('tap', this.action, this);
     },
+
     doDestroy: function() {
         this.shortcut.un('tap', this.action, this);
         this.callParent();
     },
+    
     classCls: 'board',
     template: [
         {

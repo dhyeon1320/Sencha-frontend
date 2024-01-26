@@ -8,7 +8,7 @@ Ext.define('MyApp230111.view.mydb.MyDbView', {
     },
     controller: {
         onCardButtonClicked: function(button) {
-            debugger
+            alert('db 만들기입니다');
         }
     },
     layout: 'hbox',
