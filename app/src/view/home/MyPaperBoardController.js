@@ -2,7 +2,7 @@ Ext.define('MyApp230111.view.home.MyPaperBoardController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.mypaperboardcontroller',
 
-    onTabChanged: function (button, value) {
+    onMypapersTabChanged: function (button, value) {
         let store;
         switch (value) {
             case 0: store = this.getStore('testfilesediting'); break;

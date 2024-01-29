@@ -10,7 +10,7 @@ Ext.define('MyApp230111.view.home.MyPaperBoard', {
     title: '내 문제지 <b class="color-yellow">FREE</b>',
     shortcut: 'mypapers',
     bind: {
-        store: `{testfilesediting}`
+        store: `{testfilescompleted}`
     },
     items: [
         {
@@ -19,7 +19,7 @@ Ext.define('MyApp230111.view.home.MyPaperBoard', {
             publishes: 'value',
             // tab 바뀔 때마다 연결되는 store가 바뀌는 함수 작성
             listeners: {
-                change: 'onTabChanged'
+                change: 'onMypapersTabChanged'
             },
             defaults: {
                 ui: 'simpletab',

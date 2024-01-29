@@ -40,7 +40,7 @@ Ext.define('MyApp230111.view.home.HomeView', {
         },
 
         myDb: {
-            xtype: 'board',
+            xtype: 'mydbboard',
             responsiveConfig: {
                 'width < 1751': {
                     flex: '1 0 100%'
