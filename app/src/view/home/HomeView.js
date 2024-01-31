@@ -35,7 +35,7 @@ Ext.define('MyApp230111.view.home.HomeView', {
             flex: '1 0 48%',
         },
         myAnalysis: {
-            xtype: 'board',
+            xtype: 'myanalysispaperboard',
             flex: '1 0 48%',
         },
 

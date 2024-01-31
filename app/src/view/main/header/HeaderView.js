@@ -32,6 +32,11 @@ Ext.define('MyApp230111.view.main.header.HeaderView', {
         },
         {
             xtype: 'button',
+            text: '연습공간',
+            handler: 'onExampleButtonClicked'
+        },
+        {
+            xtype: 'button',
             cls: 'header-button',
             text: '내 문제지',
             handler: 'onMyPaperButtonClicked'

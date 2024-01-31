@@ -12,6 +12,10 @@ Ext.define('MyApp230111.view.main.header.HeaderViewContoller', {
 
     onHomeButtonClicked: function() {
         this.redirectTo('home', true);
+    },
+
+    onExampleButtonClicked: function () {
+        this.redirectTo('example-view', true);
     }
 })
 

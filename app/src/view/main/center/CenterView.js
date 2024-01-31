@@ -6,7 +6,7 @@ Ext.define('MyApp230111.view.main.center.CenterView', {
     layout: 'card',
     scrollable: true,
     width: '100%',
-    height: '100%',
+    height: 'calc(100% - 48px)',
     items: {
         html: 'im-center-view'
     }

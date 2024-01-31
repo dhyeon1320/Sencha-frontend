@@ -1,0 +1,69 @@
+.example-form-panel {
+    width: 980px;
+    margin: auto;
+
+    &-container {
+        width: 560px;
+        margin: auto;
+    }
+
+    &-id {
+        padding: 5px;
+        border: 1px solid lightgrey;
+        background-color: white;
+        height: 65px;
+        size: 16px;
+
+        & .x-input-el {
+            padding: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+
+    &-title {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    &-radiogroup {
+        & .x-field {
+            margin-bottom: 14px;
+        }
+
+        & .x-label-el {
+            font-size: 18px;
+            font-weight: bold;
+            align-self: center;
+            color: rgb(92, 92, 92) !important;
+        }
+
+        & .x-icon-el {
+            width: 30px;
+            height: 30px;
+            color: rgb(160, 160, 160) !important;
+            
+            &::before {
+                font-size: 25px;
+            }
+
+        }
+
+
+    }
+
+    &-button {
+        margin-top: 60px;
+        width: 100%;
+        height: 60px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        font-size: 16px;
+    }
+
+}
+
+$textfield-focused-input-underline-color : transparent;
