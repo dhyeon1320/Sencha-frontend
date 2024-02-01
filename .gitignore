@@ -2,5 +2,7 @@ bootstrap.*
 classic.json*
 modern.json*
 .sencha
-build
-data
+/build
+**/data/
+**/model/
+**/store/
