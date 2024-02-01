@@ -3,6 +3,4 @@ bootstrap.*
 classic.json*
 modern.json*
 .sencha
-**/data/
-**/model/
-**/store/
+/app/data/
