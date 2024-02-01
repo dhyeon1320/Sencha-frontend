@@ -3,4 +3,4 @@ bootstrap.*
 classic.json*
 modern.json*
 .sencha
-app/src/data/
+/app
