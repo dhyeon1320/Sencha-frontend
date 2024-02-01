@@ -26,7 +26,27 @@ Ext.define('MyApp230111.view.example.ExampleViewController', {
         const formPanel = button.up();
 
         console.log(formPanel.getValues());
-    }
+    },
 
+    onSubmitButtonClicked: function (button) {
+        // console에 나오게 만들기
+        const formpanel = button.up('formpanelid');
+        console.log(formpanel.getValues());
+
+        // dialog 나오게 만들기
+        const view = this.getView();
+        let submitdialog = this.DialogSubmit;
+
+        if (!submitdialog || submitdialog.destroyed) {
+            submitdialog = Ext.apply({
+                ownerCmp: view
+            }, view.dialogs.submitDialog);
+
+            this.DialogSubmit = submitdialog = Ext.create(submitdialog);
+        }
+
+        submitdialog.setData(formpanel.getValues())
+        submitdialog.show();
+    }
 
 })

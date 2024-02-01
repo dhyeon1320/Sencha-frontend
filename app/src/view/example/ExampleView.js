@@ -81,6 +81,9 @@ Ext.define('MyApp230111.view.example.ExampleView', {
     dialogs: {
         examleDialog: {
             xtype: 'dialog-example'
+        },
+        submitDialog: {
+            xtype: 'dialog-submit'
         }
     }
 })

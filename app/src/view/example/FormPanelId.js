@@ -2,9 +2,6 @@ Ext.define('MyApp230111.view.example.FormPanelId', {
     extend: 'Ext.form.Panel',
     alias: 'widget.formpanelid',
     cls: 'example-form-panel',
-    controller: {
-        type: 'formpanelidcontroller'
-    },
     defaults: {
         cls: 'example-form-panel-container'
     },
@@ -37,6 +34,7 @@ Ext.define('MyApp230111.view.example.FormPanelId', {
                     xtype: 'radiogroup',
                     reference: 'radiogroup_tab',
                     publishes: 'value',
+                    name: 'radio',
                     cls: 'example-form-panel-radiogroup',
                     items: [
                         {
@@ -127,7 +125,7 @@ Ext.define('MyApp230111.view.example.FormPanelId', {
                 },
                 {
                     xtype: 'spinnerfield',
-                    name: 'money',
+                    name: 'cost',
                     value: 10000,
                     cls: 'example-form-panel-id'
                 }
