@@ -19,7 +19,6 @@ Ext.define('MyApp230111.view.home.NoticeListBoard', {
     ],
 
     reset: function () {
-        debugger
         const selectable = this.down('noticegridmini').getSelectable();
 
         selectable.deselectAll();

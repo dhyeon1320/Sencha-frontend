@@ -1,8 +1,7 @@
+/build
 bootstrap.*
 classic.json*
 modern.json*
 .sencha
-/build
-**/data/
-**/model/
-**/store/
+# data는 로컬에 따로 저장해놓을 것
+/app/src/data/ 
