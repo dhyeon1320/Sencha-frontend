@@ -4,6 +4,7 @@
 // clear style of using promise
 
 // async
+// async를 사용하면 promise를 쓰지 않아도 자동으로 promise로 실행해줌
 async function fetchUser() {
     // do network request in 10 secs
     return 'ellie';
@@ -34,10 +35,15 @@ function getBanana() {
     .then(() => 'banana');
 }
 
+// async 사용하지 않았을 때
 function pickFruits() {
+    // apple 받아옴
     return getApple()
+    // apple 받아오면 바나나를 받아옴
     .then(apple => {
-        return getBanana().then(banana => `${apple} + ${banana}`)
+        return getBanana()
+        // 바나나도 받아오면 apple, banana 받아옴
+        .then(banana => `${apple} + ${banana}`)
     })
 }
 
@@ -55,7 +61,8 @@ pickfruits().then(console.log);
 
 // useful Promise APIs
 function pickAllFruits() {
-    return Promise.all([getApple(), getBanana()]).then(fruits => fruits.join(' + '));
+    return Promise.all([getApple(), getBanana()])
+    .then(fruits => fruits.join(', '));
 }
 
 pickAllFruits().then(console.log);

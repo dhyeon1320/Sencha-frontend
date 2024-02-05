@@ -11,6 +11,7 @@ const promise = new Promise((resolve, reject) => {
     // doing some heavy work (network, read files)
     console.log('doing something...');
     setTimeout(() => {
+        // 성공했을 때 resolve 함수에 데이터를 넣어 실행
         resolve('ellie');
         // reject(new Error('no network'));
     }, 2000);
@@ -20,12 +21,17 @@ const promise = new Promise((resolve, reject) => {
 // consumer
 // then, catch, finally
 promise
+    // 성공했을 때
     .then((value) => {
     console.log(value);
     })
+
+    // 에러 나왔을 때 수행할 callback 함수
     .catch(error => {
         console.log(error);
     })
+
+    // 성공 유무 관계 없이 무조건 실행되는 함수
     .finally(() => {
         console.log('finally');
     })
