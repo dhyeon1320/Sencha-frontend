@@ -29,9 +29,13 @@ Ext.define('MyApp230111.view.example.ExampleViewController', {
     },
 
     onSubmitButtonClicked: function (button) {
-        // console에 나오게 만들기
         const formpanel = button.up('formpanelid');
-        console.log(formpanel.getValues());
+        const formValues = formpanel.getValues();
+        // viewmodel에 data를 넣을 때
+        this.getViewModel().setData(formValues);
+
+        // console에 data 나오게 만들기
+        console.log(formValues);
 
         // dialog 나오게 만들기
         const view = this.getView();
@@ -44,9 +48,16 @@ Ext.define('MyApp230111.view.example.ExampleViewController', {
 
             this.DialogSubmit = submitdialog = Ext.create(submitdialog);
         }
-
-        submitdialog.setData(formpanel.getValues())
+        // dialog에 data를 직접 삽입할 때
+        // submitdialog.setData(formValues);
         submitdialog.show();
+    },
+
+    onCreateDialog3ButtonClicked: function () {
+        const dialog = this.DialogExample;
+        
+        dialog.show();
+
     }
 
 })

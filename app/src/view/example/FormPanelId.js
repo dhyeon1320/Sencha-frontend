@@ -9,7 +9,6 @@ Ext.define('MyApp230111.view.example.FormPanelId', {
     items: [
         {
             xtype: 'container',
-            alignSelf: 'center',
             items: [
                 {
                     html: '수학비서 아이디',

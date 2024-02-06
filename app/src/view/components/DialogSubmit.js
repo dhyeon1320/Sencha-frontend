@@ -2,6 +2,18 @@ Ext.define('MyApp230111.view.components.DialogSubmit', {
     extend: 'Ext.Dialog',
     alias: 'widget.dialog-submit',
     closable: true,
+    bind: {
+        data: {
+            id : `{id}`,
+            radio : `{radio}`,
+            number: `{number}`,
+            email: `{email}`,
+            name: `{name}`,
+            date: `{date}`,
+            cost: `{cost}`
+        }
+    },
+
     tpl: [
         `수학비서 아이디 : {id}`,
         `<br/>`,

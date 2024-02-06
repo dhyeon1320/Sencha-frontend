@@ -23,7 +23,12 @@ Ext.define('MyApp230111.view.example.ExampleView', {
                     xtype: 'button',
                     text: '다이얼로그 만들기2',
                     handler: 'onCreateDialog2ButtonClicked'
-                }
+                },
+                 {
+                    xtype: 'button',
+                    text: '다이얼로그 만들기3',
+                    handler: 'onCreateDialog3ButtonClicked'
+                 }
             ]
 
         },
